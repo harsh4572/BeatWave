@@ -1,0 +1,1279 @@
+/* ======================================================
+   RESET
+====================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ======================================================
+   BODY
+====================================================== */
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(0, 245, 255, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(168, 85, 247, 0.08),
+            transparent 30%
+        ),
+        #080b10;
+
+    color: #ffffff;
+
+}
+
+
+/* ======================================================
+   APP
+====================================================== */
+
+.app {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* ======================================================
+   NAVBAR
+====================================================== */
+
+.navbar {
+
+    height: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        0 7%;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    background:
+        rgba(8, 11, 16, 0.72);
+
+    backdrop-filter:
+        blur(15px);
+
+}
+
+
+/* ======================================================
+   LOGO
+====================================================== */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.logo span {
+
+    color: #00f5ff;
+
+    font-size: 28px;
+
+    text-shadow:
+        0 0 12px
+        rgba(0, 245, 255, 0.8);
+
+}
+
+
+/* ======================================================
+   NAV
+====================================================== */
+
+.navbar nav {
+
+    display: flex;
+
+    gap: 35px;
+
+}
+
+
+.navbar nav a {
+
+    color: #7d8490;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.navbar nav a:hover {
+
+    color: #00f5ff;
+
+}
+
+
+.navbar nav a.active {
+
+    color: #ffffff;
+
+}
+
+
+/* ======================================================
+   PROFILE
+====================================================== */
+
+.profile-btn {
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(0, 245, 255, 0.25);
+
+    background:
+        rgba(0, 245, 255, 0.08);
+
+    color: #00f5ff;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+/* ======================================================
+   MAIN
+====================================================== */
+
+.main-content {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin:
+        auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+    min-height:
+        calc(100vh - 80px);
+
+}
+
+
+/* ======================================================
+   HERO
+====================================================== */
+
+.hero {
+
+    padding:
+        40px 0;
+
+}
+
+
+.small-title {
+
+    color: #00f5ff;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+    margin-bottom: 15px;
+
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(50px, 7vw, 82px);
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero h1 span {
+
+    color: #00f5ff;
+
+    text-shadow:
+        0 0 25px
+        rgba(0, 245, 255, 0.45);
+
+}
+
+
+.description {
+
+    max-width: 500px;
+
+    color: #8b929e;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* ======================================================
+   CONTROL OPTIONS
+====================================================== */
+
+.control-options {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.control-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding:
+        15px 18px;
+
+    min-width: 205px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 15px;
+
+    color: white;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        0.3s ease;
+
+}
+
+
+.control-card:hover {
+
+    border-color:
+        rgba(0, 245, 255, 0.3);
+
+    transform:
+        translateY(-3px);
+
+    background:
+        rgba(0, 245, 255, 0.05);
+
+}
+
+
+.control-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        rgba(0, 245, 255, 0.08);
+
+    font-size: 20px;
+
+}
+
+
+.control-card h3 {
+
+    font-size: 14px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.control-card p {
+
+    color: #7d8490;
+
+    font-size: 11px;
+
+}
+
+
+/* ======================================================
+   VOICE STATUS
+====================================================== */
+
+.voice-status {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding:
+        9px 14px;
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    color: #7d8490;
+
+    font-size: 12px;
+
+    transition:
+        0.3s ease;
+
+}
+
+
+/* ======================================================
+   PLAYER
+====================================================== */
+
+.player {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding:
+        35px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    box-shadow:
+        0 25px 70px
+        rgba(0, 0, 0, 0.35);
+
+    backdrop-filter:
+        blur(20px);
+
+}
+
+
+/* ======================================================
+   ALBUM
+====================================================== */
+
+.album-container {
+
+    width: 230px;
+
+    height: 230px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.album-glow {
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00f5ff,
+            #a855f7,
+            #ec4899
+        );
+
+    filter:
+        blur(45px);
+
+    opacity: 0.35;
+
+}
+
+
+.album {
+
+    width: 190px;
+
+    height: 190px;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        conic-gradient(
+            #00f5ff,
+            #a855f7,
+            #ec4899,
+            #00f5ff
+        );
+
+    box-shadow:
+        0 0 35px
+        rgba(0, 245, 255, 0.25);
+
+    animation:
+        rotateAlbum 7s linear infinite;
+
+    animation-play-state:
+        paused;
+
+}
+
+
+.album::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 135px;
+
+    height: 135px;
+
+    border-radius: 50%;
+
+    background:
+        #10131a;
+
+}
+
+
+.album-center {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 35px;
+
+    color: #00f5ff;
+
+    text-shadow:
+        0 0 15px
+        rgba(0, 245, 255, 0.7);
+
+}
+
+
+@keyframes rotateAlbum {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* ======================================================
+   SONG INFO
+====================================================== */
+
+.song-info {
+
+    text-align: center;
+
+    margin-top: 15px;
+
+}
+
+
+.song-info .playing {
+
+    color: #00f5ff;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.song-info h2 {
+
+    font-size: 22px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.song-info > p:last-child {
+
+    color: #7d8490;
+
+    font-size: 12px;
+
+}
+
+
+/* ======================================================
+   PROGRESS
+====================================================== */
+
+.progress-area {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    margin-top: 25px;
+
+}
+
+
+.time {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #666d78;
+
+    font-size: 10px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.progress-bar {
+
+    width: 100%;
+
+    height: 4px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+}
+
+
+.progress {
+
+    width: 0%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00f5ff,
+            #a855f7
+        );
+
+    border-radius: 10px;
+
+}
+
+
+/* ======================================================
+   PLAYER CONTROLS
+====================================================== */
+
+.player-controls {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 22px;
+
+    margin-top: 22px;
+
+}
+
+
+.player-controls button {
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    color: #ffffff;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.player-controls button:hover {
+
+    color: #00f5ff;
+
+    background:
+        rgba(0, 245, 255, 0.08);
+
+}
+
+
+.player-controls .play-btn {
+
+    width: 58px;
+
+    height: 58px;
+
+    font-size: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00f5ff,
+            #a855f7
+        );
+
+    color: #080b10;
+
+    box-shadow:
+        0 0 25px
+        rgba(0, 245, 255, 0.3);
+
+}
+
+
+/* ======================================================
+   SHUFFLE / REPEAT ACTIVE
+====================================================== */
+
+#shuffleBtn.active,
+#repeatBtn.active {
+
+    color: #00f5ff;
+
+    background:
+        rgba(0, 245, 255, 0.12);
+
+    box-shadow:
+        0 0 12px
+        rgba(0, 245, 255, 0.25);
+
+}
+
+
+/* ======================================================
+   VOLUME
+====================================================== */
+
+.volume-control {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    margin:
+        18px auto 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding:
+        8px 12px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    border:
+        1px solid
+        rgba(0, 245, 255, 0.08);
+
+    border-radius: 16px;
+
+}
+
+
+.volume-control button {
+
+    border: none;
+
+    background: transparent;
+
+    color: #7d8490;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    min-width: 24px;
+
+    height: 25px;
+
+    border-radius: 7px;
+
+    transition:
+        0.25s ease;
+
+    white-space: nowrap;
+
+}
+
+
+.volume-control button:hover {
+
+    color: #00f5ff;
+
+    background:
+        rgba(0, 245, 255, 0.08);
+
+    text-shadow:
+        0 0 10px
+        rgba(0, 245, 255, 0.7);
+
+}
+
+
+/* ======================================================
+   MUTE
+====================================================== */
+
+#muteBtn {
+
+    font-size: 15px;
+
+    min-width: 25px;
+
+}
+
+
+/* ======================================================
+   FULL VOLUME
+====================================================== */
+
+#fullVolumeBtn {
+
+    font-size: 10px;
+
+    min-width: 35px;
+
+}
+
+
+/* ======================================================
+   VOLUME PERCENTAGE
+====================================================== */
+
+#volumePercentage {
+
+    min-width: 36px;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    color: #00f5ff;
+
+    text-shadow:
+        0 0 8px
+        rgba(0, 245, 255, 0.5);
+
+}
+
+
+/* ======================================================
+   SLIDER
+====================================================== */
+
+#volumeSlider {
+
+    flex: 1;
+
+    min-width: 80px;
+
+    height: 4px;
+
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    background:
+        rgba(255, 255, 255, 0.10);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    cursor: pointer;
+
+}
+
+
+#volumeSlider::-webkit-slider-thumb {
+
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #00f5ff;
+
+    border:
+        2px solid
+        #10131a;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 10px
+        rgba(0, 245, 255, 0.8);
+
+}
+
+
+#volumeSlider::-moz-range-thumb {
+
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #00f5ff;
+
+    border:
+        2px solid
+        #10131a;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 10px
+        rgba(0, 245, 255, 0.8);
+
+}
+
+
+/* ======================================================
+   VISUALIZER
+====================================================== */
+
+.visualizer {
+
+    width: 100%;
+
+    max-width: 300px;
+
+    height: 45px;
+
+    margin-top: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 4px;
+
+}
+
+
+.visualizer span {
+
+    width: 4px;
+
+    height: 15px;
+
+    border-radius: 5px;
+
+    background:
+        linear-gradient(
+            to top,
+            #00f5ff,
+            #a855f7
+        );
+
+    animation:
+        visualizer 0.8s ease-in-out infinite alternate;
+
+    animation-play-state:
+        paused;
+
+}
+
+
+.visualizer span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.visualizer span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.visualizer span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.visualizer span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.visualizer span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.visualizer span:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.visualizer span:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+.visualizer span:nth-child(9) {
+    animation-delay: 0.8s;
+}
+
+.visualizer span:nth-child(10) {
+    animation-delay: 0.9s;
+}
+
+.visualizer span:nth-child(11) {
+    animation-delay: 1s;
+}
+
+.visualizer span:nth-child(12) {
+    animation-delay: 1.1s;
+}
+
+
+@keyframes visualizer {
+
+    from {
+        height: 8px;
+    }
+
+    to {
+        height: 38px;
+    }
+
+}
+
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width: 900px) {
+
+    .main-content {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        padding:
+            40px 0;
+
+    }
+
+
+    .hero {
+
+        text-align: center;
+
+    }
+
+
+    .description {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+
+    .control-options {
+
+        justify-content: center;
+
+    }
+
+
+    .voice-status {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+
+        padding:
+            0 5%;
+
+    }
+
+
+    .navbar nav {
+
+        display: none;
+
+    }
+
+
+    .main-content {
+
+        width: 92%;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 55px;
+
+    }
+
+
+    .control-card {
+
+        width: 100%;
+
+    }
+
+
+    .player {
+
+        padding:
+            25px 15px;
+
+    }
+
+
+    .album-container {
+
+        width: 200px;
+
+        height: 200px;
+
+    }
+
+
+    .album {
+
+        width: 165px;
+
+        height: 165px;
+
+    }
+
+
+    .album::before {
+
+        width: 118px;
+
+        height: 118px;
+
+    }
+
+
+    .player-controls {
+
+        gap: 12px;
+
+    }
+
+
+    .volume-control {
+
+        max-width: 290px;
+
+        gap: 4px;
+
+        padding:
+            8px 6px;
+
+    }
+
+
+    .volume-control button {
+
+        min-width: 20px;
+
+        font-size: 13px;
+
+    }
+
+
+    #fullVolumeBtn {
+
+        min-width: 32px;
+
+        font-size: 9px;
+
+    }
+
+
+    #volumePercentage {
+
+        min-width: 34px;
+
+        font-size: 10px;
+
+    }
+
+
+    #volumeSlider {
+
+        min-width: 45px;
+
+    }
+
+}

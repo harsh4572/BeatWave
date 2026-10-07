@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>BeatWave | Music Player</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+    <div class="app">
+
+        <!-- ================= NAVBAR ================= -->
+
+        <header class="navbar">
+
+            <div class="logo">
+
+                <span>♫</span>
+
+                BeatWave
+
+            </div>
+
+
+            <nav>
+
+                <a href="#" class="active">
+                    Home
+                </a>
+
+                <a href="#">
+                    Library
+                </a>
+
+                <a href="#">
+                    Favorites
+                </a>
+
+            </nav>
+
+
+            <button class="profile-btn">
+                HB
+            </button>
+
+        </header>
+
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="main-content">
+
+
+            <!-- ================= HERO ================= -->
+
+            <section class="hero">
+
+                <p class="small-title">
+                    YOUR PERSONAL MUSIC SPACE
+                </p>
+
+
+                <h1>
+
+                    Feel the
+
+                    <span>Beat.</span>
+
+                </h1>
+
+
+                <p class="description">
+
+                    Control your music with your voice or
+                    simply clap your hands.
+                    No need to touch your device.
+
+                </p>
+
+
+
+                <!-- ================= CONTROL OPTIONS ================= -->
+
+                <div class="control-options">
+
+
+                    <!-- VOICE CONTROL -->
+
+                    <button
+                        class="control-card"
+                        id="voiceControlBtn">
+
+                        <div class="control-icon">
+                            🎙️
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Voice Control
+                            </h3>
+
+                            <p>
+                                Speak to control music
+                            </p>
+
+                        </div>
+
+                    </button>
+
+
+
+                    <!-- CLAP CONTROL -->
+
+                    <button
+                        class="control-card"
+                        id="clapControlBtn">
+
+                        <div class="control-icon">
+                            👏
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Clap Control
+                            </h3>
+
+                            <p>
+                                Control with claps
+                            </p>
+
+                        </div>
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- ================= VOICE STATUS ================= -->
+
+                <div
+                    class="voice-status"
+                    id="voiceStatus">
+
+                    🎙️ Voice control is OFF
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ================= PLAYER ================= -->
+
+            <section class="player">
+
+
+                <!-- AUDIO -->
+
+                <audio id="audioPlayer"></audio>
+
+
+
+                <!-- ================= ALBUM ================= -->
+
+                <div class="album-container">
+
+                    <div class="album-glow"></div>
+
+
+                    <div class="album">
+
+                        <div class="album-center">
+                            ♫
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= SONG INFO ================= -->
+
+                <div class="song-info">
+
+                    <p class="playing">
+                        NOW PLAYING
+                    </p>
+
+
+                    <h2>
+                        For a Reason
+                    </h2>
+
+
+                    <p>
+                        BeatWave Artist
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================= PROGRESS ================= -->
+
+                <div class="progress-area">
+
+
+                    <div class="time">
+
+                        <span>
+                            0:00
+                        </span>
+
+
+                        <span>
+                            0:00
+                        </span>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <div class="progress"></div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ================= MAIN PLAYER CONTROLS ================= -->
+
+                <div class="player-controls">
+
+
+                    <!-- SHUFFLE -->
+
+                    <button
+                        id="shuffleBtn"
+                        type="button"
+                        title="Shuffle">
+
+                        🔀
+
+                    </button>
+
+
+                    <!-- PREVIOUS -->
+
+                    <button
+                        id="previousBtn"
+                        type="button"
+                        title="Previous">
+
+                        ↶
+
+                    </button>
+
+
+                    <!-- PLAY / PAUSE -->
+
+                    <button
+                        class="play-btn"
+                        id="playBtn"
+                        type="button">
+
+                        ▶
+
+                    </button>
+
+
+                    <!-- NEXT -->
+
+                    <button
+                        id="nextBtn"
+                        type="button"
+                        title="Next">
+
+                        ↷
+
+                    </button>
+
+
+                    <!-- REPEAT -->
+
+                    <button
+                        id="repeatBtn"
+                        type="button"
+                        title="Repeat">
+
+                        🔁
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- ================= VOLUME ================= -->
+
+                <div class="volume-control">
+
+
+                    <!-- MUTE -->
+
+                    <button
+                        id="muteBtn"
+                        type="button"
+                        title="Mute">
+
+                        🔊
+
+                    </button>
+
+
+                    <!-- VOLUME DOWN -->
+
+                    <button
+                        id="volumeDownBtn"
+                        type="button"
+                        title="Volume Down">
+
+                        −
+
+                    </button>
+
+
+                    <!-- VOLUME SLIDER -->
+
+                    <input
+                        type="range"
+                        id="volumeSlider"
+                        min="0"
+                        max="1"
+                        step="0.01"
+                        value="0.8"
+                    >
+
+
+                    <!-- VOLUME PERCENTAGE -->
+
+                    <span id="volumePercentage">
+                        80%
+                    </span>
+
+
+                    <!-- VOLUME UP -->
+
+                    <button
+                        id="volumeUpBtn"
+                        type="button"
+                        title="Volume Up">
+
+                        +
+
+                    </button>
+
+
+                    <!-- FULL VOLUME -->
+
+                    <button
+                        id="fullVolumeBtn"
+                        type="button"
+                        title="Full Volume">
+
+                        100%
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- ================= VISUALIZER ================= -->
+
+                <div class="visualizer">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
